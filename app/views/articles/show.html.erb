@@ -1,0 +1,8 @@
+<% article_title = Kramdown::Document.new(@article.title).to_html %>
+<% article_content = Kramdown::Document.new(@article.content).to_html %>
+
+<div class="container">
+<h1>Show Article</h1>
+<h2><%= article_title.html_safe %></h2>
+<p><%= article_content.html_safe %></p>
+</div>
